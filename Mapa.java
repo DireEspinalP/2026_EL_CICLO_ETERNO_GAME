@@ -3,6 +3,9 @@ package com.cicloeterno.game;
 import java.util.HashMap;
 import java.util.Map;
 
+//librerái de ArrayList
+import java.util.ArrayList;
+
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -31,6 +34,9 @@ public class Mapa {
     // Integrer para ID del bloque (ejemplo: 0 = aire)
     private Map<String, Integer> grillaCoordenadas;
 
+    //lista de referencia de objetos
+    private ArrayList<Objeto> objetos;
+
     //Constructor (llamado después de que libGDX haya iniciado)
     public Mapa(String rutaFondoBase) {
         this.fondoBase = new Texture(rutaFondoBase);
@@ -41,6 +47,9 @@ public class Mapa {
         this.altoMundo = fondoBase.getHeight();
         this.columnas = anchoMundo / TAMANO_TILE;
         this.filas = altoMundo / TAMANO_TILE;
+
+        //Inicialización de la lista objetos
+        this.objetos = new ArrayList<>();
 
         //Log para verificar que el mapa se ha cargado correctamente 
         System.out.println("Mapa: " + anchoMundo + "x" + altoMundo
@@ -78,6 +87,25 @@ public class Mapa {
         String claveCoordenada = x + "," + y;
         // Si no hay nada en esa coordenada, devuelve 0
         return grillaCoordenadas.getOrDefault(claveCoordenada, 0);
+    }
+
+    //Método para evitar posicionar dos objetos distintos en las mismas coordenadas
+    public boolean hayObjetoEn(int x, int y) {
+        //for-each para recorrer la lista objetos
+        for (Objeto o : objetos) {
+            if ((o.getPosicionx() == x) && (o.getPosiciony() == y)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+        //Método para agregar objeto o
+    public void agregarObjeto(Objeto o) {
+        //evitar agregar dos objetos en una misma posición
+        if (!hayObjetoEn(o.getPosicionx(), o.getPosiciony())) {
+            objetos.add(o);
+        }
     }
 
     // === RENDERIZADO ===

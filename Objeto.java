@@ -1,3 +1,5 @@
+package com.cicloeterno.game;
+
 public class Objeto {
     private int x, y;
     private TipoObjeto tipo;
@@ -14,7 +16,5 @@ public class Objeto {
     public int getPosiciony() { return y; }
     public TipoObjeto getTipo() { return tipo; }
     public boolean isBloqueaPaso() { return bloqueaPaso; }
-
-
 
 }
