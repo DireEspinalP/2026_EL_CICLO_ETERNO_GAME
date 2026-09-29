@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+//linea eliminada porque OBjeto ya está en el mismo paquete que Mapa
 
 /**
  * Representa el mapa del juego: una imagen de fondo y una grilla de tiles.
@@ -61,6 +62,7 @@ public class Mapa {
     public int getAltoMundo() { return altoMundo; }
     public int getColumnas() { return columnas; }
     public int getFilas() { return filas; }
+    public ArrayList<Objeto> getObjetos() { return objetos; }
 
     // === METODOS PARA LA GRILLA DE ELEMENTOS ===
 
@@ -100,13 +102,20 @@ public class Mapa {
         return false;
     }
 
-        //Método para agregar objeto o
+    //Método para agregar objeto o
     public void agregarObjeto(Objeto o) {
         //evitar agregar dos objetos en una misma posición
         if (!hayObjetoEn(o.getPosicionx(), o.getPosiciony())) {
             objetos.add(o);
         }
     }
+
+    //Método para remover un objeto
+    public boolean removerObjeto(Objeto o) {
+       return objetos.remove(o);
+    }
+
+
 
     // === RENDERIZADO ===
 
