@@ -1,4 +1,4 @@
-public class Enemy extends PJS{
+public class Enemy extends PJS implements Combate{
     // Atributos
     private double exp;
     private int lvl;
@@ -38,7 +38,7 @@ public class Enemy extends PJS{
             return;
         }
 
-    //Muestra el nombre de quien lanza y recibe el ataque 
+        //Muestra el nombre de quien lanza y recibe el ataque 
         System.out.println(this.name + " lanza un ataque a " + objetivo.getName());
         objetivo.damage(this.atk);
 
