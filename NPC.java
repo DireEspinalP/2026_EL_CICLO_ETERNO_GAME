@@ -1,4 +1,4 @@
-public class NPC extends PJS{
+public class NPC extends PJS {
     
     // Constructor
     public NPC(String name, double hp, double atk, double def, boolean isAlive, double cash){

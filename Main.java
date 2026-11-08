@@ -15,6 +15,8 @@ public class Main {
         player.atack(enemigo);
         enemigo.atack(player);
 
+        player.stats();
+
         System.out.println(player.hp);
         System.out.println(enemigo.hp);
 
