@@ -1,8 +1,8 @@
 public class Arma extends Item {
     private double bonusAtk;
 
-    public Arma(String nombre, String descripcion, double bonusAtk) {
-        super(nombre, descripcion);
+    public Arma(String nombre, String descripcion, Rareza rareza, double valor, double bonusAtk) {
+        super(nombre, descripcion, rareza, valor);
         this.bonusAtk = bonusAtk;
     }
 

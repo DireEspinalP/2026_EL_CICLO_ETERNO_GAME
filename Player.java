@@ -33,7 +33,7 @@ public class Player extends PJS {
             this.isAlive = false; 
         }
 
-        System.out.println("Recibistes " + cant + " de daño.");
+        System.out.println("Recibiste " + cant + " de daño.");
         System.out.println("Vida restante: " + this.hp);
     }
 

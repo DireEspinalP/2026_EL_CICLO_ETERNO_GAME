@@ -1,8 +1,8 @@
 public class Consumible extends Item {
     private double curacion;
 
-    public Consumible(String nombre, String descripcion, double curacion) {
-        super(nombre, descripcion);
+    public Consumible(String nombre, String descripcion, Rareza rareza, double valor, double curacion) {
+        super(nombre, descripcion, rareza, valor);
         this.curacion = curacion;
     }
 
@@ -11,7 +11,7 @@ public class Consumible extends Item {
     @Override 
     public void usar(Player jugador) {
         if (!jugador.getIsAlive()) {
-            System.out.println(jugador.getName() + " está derrotado hy no puede usar " + nombre);
+            System.out.println(jugador.getName() + " está derrotado y no puede usar " + nombre);
             return;
         }
         jugador.setHp(jugador.getHp() + curacion);
