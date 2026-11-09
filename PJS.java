@@ -39,5 +39,7 @@ interface Combate{ // Interfaz de combate
     public void damage(double cant);
     default void atack(Enemy objetivo){};
     default void atack(Player objetivo){};
+    void atackEnemy(Enemy objetivo);
+    void atackPlayer(Player objetivo);
     default void stats(){};
 }

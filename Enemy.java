@@ -31,17 +31,21 @@ public class Enemy extends PJS implements Combate{
         System.out.println("Vida restante: " + this.hp);
     }
 
-    @Override     //Al atacar al enemigo, si muere, aparece el mensaje de entidad derrotada
+    @Override     //Al atacar al jugaddor, si muere, aparece el mensaje de jugador derrotado
     public void atack(Player objetivo) {
-        if (!objetivo.isAlive) {
-            System.out.println("Jugador derrotado.");
+        if (!this.isAlive) {
+            System.out.println("Entidad derrotada.");
             return;
         }
-
-        //Muestra el nombre de quien lanza y recibe el ataque 
+        atackPlayer(objetivo);
+    }
+        
+    @Override //Muestra el nombre de quien lanza y recibe el ataque 
+    public void atackPlayer(Player objetivo){
         System.out.println(this.name + " lanza un ataque a " + objetivo.getName());
-        objetivo.damage(this.atk);
-
+        objetivo.damage(this.atk);  
     }
 
+    @Override 
+    public void atackEnemy(Enemy objetivo){}
 }

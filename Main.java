@@ -7,8 +7,8 @@ public class Main {
         System.out.println("Escribe el nombre de tu personaje");
         name = sc.nextLine();
         sc.close();
-        //String name, double hp, double atk, double def, double exp, int lvl, boolean isAlive, double cash
-        Player player = new Player(name,200.0, 10.0, 0.0, 0.0, 1, true, 0.0);
+        //String name, double hp, double maxhp, double atk, double def, double exp, int lvl, boolean isAlive, double cash
+        Player player = new Player(name,200.0, 200.0,10.0, 0.0, 0.0, 1, true, 0.0);
         Enemy enemigo = new Enemy("Royer", 250.0, 15.0, 20.5, 15.0,1, true, 30.0);
 
         
