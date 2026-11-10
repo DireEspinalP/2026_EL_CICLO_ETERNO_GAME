@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -18,8 +19,11 @@ public class Main {
         System.out.println(player.hp);
         System.out.println(enemigo.hp);
 
-        Arma regla = new Arma("Regla", "Metálica", Rareza.COMUN, 5, 3);
-        System.out.println(regla);
+        List<Item> catalogo = CatalogoItems.todos();
+
+        for (Item cat : catalogo) {
+            System.out.println(cat);
+        }
 
     }
 }
