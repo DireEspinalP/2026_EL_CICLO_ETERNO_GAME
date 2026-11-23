@@ -1,8 +1,8 @@
 public class Consumible extends Item {
     private double curacion;
 
-    public Consumible(String nombre, String descripcion, Rareza rareza, double valor, double curacion) {
-        super(nombre, descripcion, rareza, valor);
+    public Consumible(String nombre, String descripcion, int cantidad, Rareza rareza, double valor, double curacion) {
+        super(nombre, descripcion, cantidad, 10, rareza, valor);
         this.curacion = curacion;
     }
 

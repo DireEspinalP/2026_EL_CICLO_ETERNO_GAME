@@ -19,7 +19,7 @@ public class Main {
         System.out.println(player.hp);
         System.out.println(enemigo.hp);
 
-        List<Item> catalogo = CatalogoItems.todos();
+        List<Item> catalogo = Catalogo.getCatalogo();
 
         for (Item cat : catalogo) {
             System.out.println(cat);

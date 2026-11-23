@@ -2,6 +2,7 @@ public class Player extends PJS {
     // Atributos
     private double exp;
     private int lvl;
+    private Inventario inventario = new Inventario(Catalogo.getCatalogo());
 
     // Constructor
     public Player(String name ,double hp, double atk, double def, double exp, int lvl, boolean isAlive, double cash){  
@@ -16,6 +17,7 @@ public class Player extends PJS {
     public double getExp() {return exp;}
     public int    getLvl() {return lvl;}    
     public double getDef() {return def;}
+    public Inventario getInventario() {return inventario;}
 
     // setters
     public void setHp(double hp)   {this.hp = hp;}

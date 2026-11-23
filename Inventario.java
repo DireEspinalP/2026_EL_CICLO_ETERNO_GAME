@@ -13,6 +13,7 @@ public class Inventario {
             items.put(item.getNombre(), item) ;
         }
     }
+
     // Agrega items respetando el limite de stacks, si solo se puede agregar 7 y tu quieres poner 10. Solo agregara 7 y los otros 3 desaparecen
     public void agregarItem(String nombre, int cantidad) {
         Item item = items.get(nombre) ;
@@ -83,6 +84,7 @@ public class Inventario {
         }
         return true ;
     }
+
     // "debug" se muestran todos los objetos del inventario y su cantidad
     public void mostrar() {
         System.out.println("=== INVENTARIO ===") ;
