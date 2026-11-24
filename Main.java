@@ -34,6 +34,10 @@ public class Main {
         }
         System.out.println(rarezaCount);
 
+        List<Item> itemsFiltrados = Cofre.itemsDeRareza(Rareza.LEGENDARIO);
+        for (Item itemsRaros : itemsFiltrados) {
+            System.out.println(itemsRaros);
+        }
 
         
 
