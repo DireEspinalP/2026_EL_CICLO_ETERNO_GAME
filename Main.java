@@ -1,5 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args){
@@ -19,13 +21,21 @@ public class Main {
         System.out.println(player.hp);
         System.out.println(enemigo.hp);
 
-        List<Item> catalogo = Catalogo.getCatalogo();
+        Item item = Cofre.abrir();
+        player.getInventario().agregarItem(item.getNombre(), 1);
+        System.out.println("Has obtenido: " + item.getNombre() + " x" + 1);
+        player.getInventario().mostrar();
 
-        for (Item cat : catalogo) {
-            System.out.println(cat);
+
+        Map<Rareza, Integer> rarezaCount = new HashMap<>();
+        for (int i = 0; i < 1000; i++) {
+            Rareza rareza = Cofre.elegirRareza();
+            rarezaCount.put(rareza, rarezaCount.getOrDefault(rareza, 0) + 1);
         }
+        System.out.println(rarezaCount);
 
-        System.out.println(Cofre.abrir());
+
+        
 
     }
 }
