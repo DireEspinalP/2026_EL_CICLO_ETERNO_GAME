@@ -2,6 +2,7 @@ public class Player extends PJS {
     // Atributos
     private double exp;
     private int lvl;
+    private Inventario inventario = new Inventario(Catalogo.getCatalogo());
 
     // Constructor
     public Player(String name ,double hp, double atk, double def, double exp, int lvl, boolean isAlive, double cash){  
@@ -16,13 +17,14 @@ public class Player extends PJS {
     public double getExp() {return exp;}
     public int    getLvl() {return lvl;}    
     public double getDef() {return def;}
+    public Inventario getInventario() {return inventario;}
 
     // setters
     public void setHp(double hp)   {this.hp = hp;}
     public void setAtk(double atk) {this.atk = atk;}
     public void setExp(double exp) {this.exp = exp;}
     public void setLvl(int lvl)    {this.lvl = lvl;}
-    public void getDef(double def) {this.def = def;}
+    public void setDef(double def) {this.def = def;}
 
     // --- Métodos ---
     @Override     //Resta la vida(hp) con el daño recibido, si hp <= 0 entonces muere el objetivo 
@@ -33,7 +35,7 @@ public class Player extends PJS {
             this.isAlive = false; 
         }
 
-        System.out.println("Recibistes " + cant + " de daño.");
+        System.out.println("Recibiste " + cant + " de daño.");
         System.out.println("Vida restante: " + this.hp);
     }
 
