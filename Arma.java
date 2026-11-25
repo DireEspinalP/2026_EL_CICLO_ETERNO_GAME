@@ -3,7 +3,7 @@ public class Arma extends Item {
     private boolean equipada;
 
     public Arma(String nombre, String descripcion, int cantidad, Rareza rareza, double valor, double bonusAtk) {
-        super(nombre, descripcion, cantidad, 3, rareza, valor);
+        super(nombre, descripcion, cantidad, 1, rareza, valor);
         this.bonusAtk = bonusAtk;
         this.equipada = false;
     }

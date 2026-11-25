@@ -46,6 +46,17 @@ public class Catalogo{
         // Legendarios
         catalogo.add(new Consumible("Comida de skipper", "Revitalizador total", 0, Rareza.LEGENDARIO, 250.0, 180.0));
 
+        // ===== ARMADURAS =====
+        //Comunes
+        catalogo.add(new Armadura("Polo de la fc", "huele a sudor", 0, Rareza.COMUN, 0, 0));
+
+        //Raras
+        catalogo.add(new Armadura("Bata de laboratorio", "manchado de reactivos", 0, Rareza.RARO, 0, 0));
+
+        //Épicas
+
+        //Legendarias
+        catalogo.add(new Armadura("Toga de graduación", "para que egreses ya", 0, Rareza.LEGENDARIO, 0, 0));
     }
 
     public static Item buscar(String nombre) {

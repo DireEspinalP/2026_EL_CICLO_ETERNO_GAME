@@ -24,7 +24,7 @@ public class Player extends PJS {
     public void setAtk(double atk) {this.atk = atk;}
     public void setExp(double exp) {this.exp = exp;}
     public void setLvl(int lvl)    {this.lvl = lvl;}
-    public void getDef(double def) {this.def = def;}
+    public void setDef(double def) {this.def = def;}
 
     // --- Métodos ---
     @Override     //Resta la vida(hp) con el daño recibido, si hp <= 0 entonces muere el objetivo 
