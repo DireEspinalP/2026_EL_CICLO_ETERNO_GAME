@@ -1,5 +1,5 @@
 # 2026_TRABAJO_POO                  
-# Copiladar el framework:
+# Copilador del framework:
 ```bash
    ./gradlew lwjgl3:run
 ```
